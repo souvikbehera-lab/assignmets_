@@ -4,6 +4,7 @@
 }
 body{
     overflow-x: hidden;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 nav {
     padding: 20px;
@@ -82,24 +83,44 @@ main {
     width: 100px;
     border-radius: 7px;
     background-color: rgb(53, 100, 242);
+     border: none;
     color: whitesmoke;
 }
-
+.dis button:hover{
+    color: rgb(53, 100, 242);
+    background-color:  whitesmoke;;
+}
 .stats {
     display: flex;
     justify-content: center;
     bottom: 1px;
     gap: 20px;
-    margin-top: 70px;
+    margin-top: 40px;
     padding: 40px;
 }
 
 .info {
     text-align: center;
-    min-width: 100px;
+    flex: 1;
+    min-width: 0;
 }
 .info span{
     padding: 0px 70px 0px 0px;
+}
+@media (max-width: 970px) {
+    .stats {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 24px 12px;
+        padding: 24px 12px;
+    }
+    .info span {
+        font-size: 28px;
+    }
+
+    .info p {
+        font-size: 16px;
+    }
 }
 article{
     background-color: rgb(238, 240, 241);
@@ -163,8 +184,13 @@ article p{
     padding: 7px 4px;
     border-radius: 19px;
     background-color: #a2c0de;
-    color: rgb(46, 46, 239);
+    color: rgb(34, 78, 173);
     text-align: justify;
+    border: none;
+}
+.cards button:hover{
+     background-color: rgb(34, 78, 173);
+    color: #a2c0de;
 }
 .discri img{
     height: 300px;
@@ -185,9 +211,14 @@ article p{
     color: azure;
     background-color: rgb(4, 68, 132);
     border-radius: 7px;
+   border: none;
+}
+.texto button:hover{
+    color: rgb(4, 68, 132);
+    background-color: azure;
 }
 .discri{
-    height: 60vh;   
+    height: 90vh;   
     gap: 0px 50px;
     display: flex;
     text-align: justify;
@@ -201,20 +232,39 @@ figure {
     display: flex;
     flex-direction: column;
     height: 90vh;
-    background-color: grey;
+    background-color: rgb(242, 241, 241);
+}
+.infos{
+    text-align: center;
+}
+.infos h3{
+    margin: 20px 0px 16px 0px;
+    
+}
+.infos p{
+    margin-bottom: 20px;
 }
 
-.images{
-    display: flex;
+.images {
+    display: grid;
+    justify-items: center;
     margin: auto;
-    flex-wrap: wrap;
-    align-items: center;
-    width: 90vw;
-    gap: 15px 15px;
-
+    width: 80vw;
+    height: auto;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 10px;
 }
-.images img{
+
+.images img {
     border-radius: 12px;
     height: 200px;
-    width: 300px;
+    width: 100%;
+    object-fit: cover;
+}
+@media screen and (max-width: 1000px) {
+    .images{
+         display: grid;
+         grid-template-columns:  repeat(2, minmax(0, 1fr));;
+        
+    }
 }
