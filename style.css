@@ -228,6 +228,10 @@ article p{
     justify-content: center;
     margin: auto;    
 }
+.discri img:hover{
+    transform: scale(1.03);
+    transition: ease 0.3s ;
+}
 figure {
     display: flex;
     flex-direction: column;
@@ -247,24 +251,57 @@ figure {
 
 .images {
     display: grid;
-    justify-items: center;
-    margin: auto;
-    width: 80vw;
-    height: auto;
     grid-template-columns: repeat(4, minmax(0, 1fr));
-    gap: 10px;
+    width: 80vw;
+    gap: 12px;
+    margin: 0 auto;
+    height: auto;
+    padding-bottom: 30px;
 }
 
 .images img {
-    border-radius: 12px;
-    height: 200px;
     width: 100%;
+    height: 250px;
+    border-radius: 12px;
     object-fit: cover;
+}
+.images img:hover{
+    transform: scale(1.03);
+    transition: ease 0.3s ;
 }
 @media screen and (max-width: 1000px) {
     .images{
-         display: grid;
-         grid-template-columns:  repeat(2, minmax(0, 1fr));;
-        
+        display: grid;
+        grid-template-columns:  repeat(2, minmax(0, 1fr));;
+        height: auto;
     }
+     .images img {
+        height: 250px;
+    }
+}
+footer{
+    display: block;
+    width: 100%;
+    height: 70vh;
+    margin-top: auto;
+    box-sizing: border-box;
+    background-color: #4f91d4;
+    padding: 20px;
+}
+.email p,.email input{
+    margin-top: 20px;
+    margin-bottom: 25px;
+    color: rgb(216, 218, 218);
+}
+.email{
+     text-align: center;
+     color: aliceblue;
+}
+.email input,button{
+    padding: 9px;
+    border: none;
+}
+.email button:hover{
+    background-color: #4f91d4;
+
 }
